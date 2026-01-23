@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #00c3ff;
+    border-radius: 20px;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("./Poppins-Regular.ttf") format("truetype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url("./Montserrat-Black.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #111314;
+    font-family: "poppins";
+    /* font-weight: 300; */
+}
+
+.navbar ul{
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+}
+
+.navbar ul li{
+    position: relative;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transition: 0.4s linear;
+}
+
+.navbar ul li.active{
+    color: #00c3ff;
+    transition: 0.4s linear;
+}
+
+.navbar ul li.active::before{
+    content:'';
+    position: absolute;
+    background: #00c3ff;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    top: 40%;
+    left: -9px;
+    transition: 0.4s linear;
+}
+
+section.services .languages p{
+    position: relative;
+    transition: 0.4s linear;
+}
+
+section.services .languages p.active{
+    background: #00c3ff;
+    transition: 0.4s linear;
+    font-weight: bolder;
+}
+
+section.services .languages p.active::before{
+    content: '';
+    position: absolute;
+    background: #00C3ff;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    left: 43%;
+    bottom: -45%;
+}
+
+
+section.services .languages  .boxItems{
+    transition: 0.4s ease;
+}
+
+
+section.projets .viewListProjet > div p {
+    position: relative;
+    transition: 0.4s linear;
+}
+
+section.projets .viewListProjet > div p.active {
+    background: #00c3ff;
+    transition: 0.4s linear;
+    font-weight: bolder;
+}
+
+section.projets .viewListProjet > div p.active::before {
+    content: '';
+    position: absolute;
+    background: #00C3ff;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    left: 43%;
+    bottom: -45%;
+}
+
+
+section.performances .row1 .item.active{
+    background: rgba(208,208,208,0.10);
+}
+
+
+section.performances .row1 .item .focusCercle{
+    transition: 0.2s ease-in-out;
+}
+
+section.performances .row1 .item .focusCercle.active{
+    border-color: #00c3ff;
+    background: #00c3ff;
+}
+
+
