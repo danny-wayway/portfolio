@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./Fontawesome/css/all.min.css">
+</head>
+<body>
+    <!-- le parent de tout mon contenu  -->
+    <div class="container-box text-white flex justify-end w-full h-full">
+
+        <!-- le sidebar-->
+        <div class="navbar fixed top-0 left-0 w-[7%] h-[100vh] bg-black flex flex-col p-3 items-center">
+            <a href="index.html" class="text-xl font-bold py-3 px-5 rounded-full bg-[#00c3ff]">D</a>
+            <ul class="mt-14 tracking-wide flex items-center gap-7 w-[70%] text-sm">
+                <li class="accueil hover:text-[#00C3ff] active"><a href="#accueil">Accueil</a></li>
+                <li class="apropos hover:text-[#00C3ff]"><a href="#apropos">A propos</a></li>
+                <li class="services hover:text-[#00C3ff]"><a href="#services">Services</a></li>
+                <li class="projets hover:text-[#00C3ff]"><a href="#projets">Projets</a></li>
+                <li class="performances hover:text-[#00C3ff]"><a href="#performances">Performances</a></li>
+                <li class="contact hover:text-[#00C3ff]"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- contenu -->
+        <main class="content h-full flex flex-col items-center w-[93%] z-[100]">
+
+            <!-- section accueil -->
+            <section id="accueil" class="accueil h-[100Vh] w-full py-3 px-[25px] flex flex-col">
+                <h1 class="uppercase mt-4 tracking-wide text-2xl">mon <span class="text-[#00c3ff]">fortfolio</span></h1>
+                <div class="info flex w-full justify-between mt-[130px]">
+                    <div class="row1 w-[55%]">
+                        <p class="text-4xl mb-[15px]">Salut, je m'appelle Danny</p>
+                        <p class="text-lg">Développeur Full-stack</p>
+                        <p class="text-gray-400 text-sm mt-[25px] text-justify mb-3">Excellente expérience en conception et développement web, et capacité à produire un travil de qualité.</p>
+                        <p class="text-gray-400 text-sm text-justify">je maîtrise les fondamentaux du web, j'accorde une grnde importance à la qualité du code, à la maintenabilité et aux performances. J'aime transformer des idées en solutions digitales concrètes, en combinant design, logique et bonnes pratiques de d&veloppement.s</p>
+                        <div class="contact flex justify-center w-full mt-14 gap-5">
+                            <div class="box flex bg-[rgba(208,208,208,0.02)] items-center px-[1.7rem] py-4 rounded-md">
+                                <i class="fab fa-facebook-f text-[#00c3ff] mr-[15px] text-[16px]"></i>
+                                <div class="textes">
+                                    <p class="font-bold mb-1 text-sm tracking-wide">facebook</p>
+                                    <p class="text-gray-400 text-xs tracking-wide">danny wayway</p>
+                                </div>
+                            </div>
+                            <div class="box flex bg-[rgba(208,208,208,0.02)] items-center px-[1.7rem] py-4 rounded-md">
+                                <i class="fab fa-whatsapp text-[#00c3ff] mr-[15px] text-[16px]"></i>
+                                <div class="textes">
+                                    <p class="font-bold mb-1 text-sm tracking-wide">whatsapp</p>
+                                    <p class="text-gray-400 text-xs tracking-wide">+243822631890</p>
+                                </div>
+                            </div>
+                            <div class="box flex bg-[rgba(208,208,208,0.02)] items-center px-[1.7rem] py-4 rounded-md">
+                                <i class="fa fa-envelope text-[#00c3ff] mr-[15px] text-[16px]"></i>
+                                <div class="textes">
+                                    <p class="font-bold mb-1 text-sm tracking-wide">Email</p>
+                                    <p class="text-gray-400 text-xs tracking-wide">waywaydanny96</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row2 bg-[rgba(208,208,208,0.02)] flex justify-center items-center py-4 w-[40%] ">
+                        <img src="../assets/danny.png" class="w-[70%] h-[100%] object-cover opacity-[0.6]" alt="photo de danny">
+                    </div>
+                </div>
+            </section>
+
+            <!-- section à propos de moi -->
+            <section id="apropos" class="apropos h-[100Vh] items-center w-full py-3 px-4 flex flex-col">
+                <p class="text-3xl uppercase tracking-wider mt-4">a propos de moi</p>
+                <article class="flex w-full justify-between mt-[100px] h-[70%]">
+                    <div class="row-images w-[40%] flex items-center justify-center h-[97%] bg-[rgba(208,208,208,0.04)]">
+                        <img src="../assets/danny2.png" class="w-[75%] opacity-[0.7] object-cover h-[70%]">
+                    </div>
+                    <div class="row-infos flex flex-col w-[55%]">
+                        <p class="text-1xl font-bold mb-3">Salut, moi c'est Danny WAY-WAY, basant à Kinshasa(RDC)</p>
+                        <p class="text-gray-400 text-sm mt-[3px] mb-3">Développeur web passioné, je crée des expériences digitales modernes, fluides et centrées sur l'utilisateur. J'aime concevoir des interfaces interactives et performantes en transformant chaque idée en produit fonctionnel et intuitif</p>
+                        <p class="text-gray-400 text-sm mt-[3px] mb-3">Currieux et orienté, je m'attache à écrire un code propre, maintenable et optimisé, tout en intétrant des animations et des interactions qui donnent vie aus interfaces</p>
+                        <div class="row-box flex w-full mt-[25px]">
+                            <div class="flex flex-col py-[30px] px-[20px] w-[200px] h-[120px] rounded-md mr-[20px] bg-[rgba(208,208,208,0.04)]  justify-center items-center">
+                                <i class="fas fa-medal mb-3 text-[#00C3ff]"></i>
+                                <p class="tracking-wide text-sm mb-3">Expérience</p>
+                                <p class="text-gray-400 text-xs">+ 3 ans</p>
+                            </div>
+                            <div class="flex flex-col py-[30px] px-[20px] w-[200px] h-[120px] rounded-md bg-[rgba(208,208,208,0.04)] justify-center items-center">
+                                <i class="fas fa-list-check  mb-3 text-[#00C3ff]"></i>
+                                <p class="tracking-wide text-sm mb-3">Projets</p>
+                                <p class="text-gray-400 text-xs">+ 4 Projets</p>
+                            </div>
+                        </div> 
+                        <button class="py-3 px-4 rounded-md bg-[#00c3ff] text-sm uppercase tracking-wide hover:bg-[#00c3e1] w-[20%] mt-14">voir plus</button>
+                    </div> 
+                </article>
+            </section>
+
+            <!-- section services -->
+            <section id="services" class="services h-full flex items-center w-full px-4 flex-col">
+                <p class="text-3xl uppercase tracking-wider mt-6 mb-[40px]">services</p>
+                <p class="text-sm text-gray-400 tracking-wider mb-[50px]">Ce que je propose</p>
+
+                <article class="boxService flex gap-5 justify-center w-[80%] mb-[50px]">
+                    <div class="item bg-[rgba(208,208,208,0.02)] rounded-md flex flex-col justify-center w-[250px] h-[230px] px-[30px]">
+                        <i class="fas fa-palette mb-3 text-[#00C3ff] text-2xl"></i>
+                        <p class="text-md text-gray-400 tracking-wide mt-4 mb-3">Développement</p>
+                        <p class="text-sm tracking-wider">Frontend</p>   
+                    </div> 
+                    <div class="item bg-[rgba(208,208,208,0.02)] rounded-md flex flex-col justify-center w-[250px] px-[30px] h-[230px]">
+                        <i class="fas fa-key mb-3 text-[#00C3ff] text-2xl"></i>
+                        <p class="text-md text-gray-400 tracking-wide mt-4 mb-3">Développement</p>
+                        <p class="text-sm tracking-wider">Backend</p>   
+                    </div> 
+                    <div class="item bg-[rgba(208,208,208,0.02)] rounded-md flex flex-col justify-center w-[250px] px-[30px] h-[230px]">
+                        <i class="fas fa-pen-nib mb-3 text-[#00C3ff] text-2xl"></i>
+                        <p class="text-md text-gray-400 tracking-wide mt-4 mb-3">Design</p>
+                        <p class="text-sm tracking-wider">UI/UX</p>   
+                    </div>
+                </article>
+
+                <article class="languages w-[68%] flex flex-col mb-[150px] mt-[50px]">
+                    <div class="viewList flex w-full justify-between mb-[60px]">
+                        <p class="tout font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center active">Tout</p>
+                        <p class="frontend font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">Frontend</p>
+                        <p class="backend font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">Backend</p>
+                        <p class="bdd font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">Base de données</p>
+                        <p class="design font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">UI/UX Design</p>
+                        <p class="outils font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">OUtils</p>
+                    </div>
+
+                    <!-- liste de tout les items (languages et outils) -->
+                    <div class="tout boxItems grid-cols-3 w-full gap-5 grid">
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_html.png" class=" w-[70px] h-[70px] object-cover mb-4">
+                            <p class="tracking-wide text-sm">HTML</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_css.png" class=" w-[70px] h-[70px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">CSS</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_javascript.png" class=" w-[70px] h-[70px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">JavaScript</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_php.png" class=" w-[70px] h-[70px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">PHP</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_bootstrap.png" class=" w-[70px] h-[70px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Bootstrap</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_tailwind2.png" class=" w-[100px] h-[60px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Tailwindcss</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_canva.png" class=" w-[130px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Canva</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_figma.png" class=" w-[65px] h-[65px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Figma</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_gsap.jpeg" class=" w-[130px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Gsap</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_github.png" class=" w-[70px] h-[60px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Github</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_mysql.png" class=" w-[80px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">MySql</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_animejs.jpeg" class=" w-[110px] h-[30px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">animeJS</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_wampm.png" class=" w-[40px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">WampServer</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_sublimetext.png" class=" w-[50px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Sublime Text</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_xampp.png" class=" w-[50px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Xampp</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_vscode.png" class=" w-[50px] h-[45px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">VsCode</p>
+                        </div>
+                    </div>
+
+                    <!-- liste de tout les languages frontend -->
+                    <div class="frontend boxItems hidden grid-cols-3 w-full gap-5">
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_html.png" class=" w-[70px] h-[70px] object-cover mb-4">
+                            <p class="tracking-wide text-sm">HTML</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_css.png" class=" w-[70px] h-[70px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">CSS</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_javascript.png" class=" w-[70px] h-[70px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">JavaScript</p>
+                        </div>
+                         <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_bootstrap.png" class=" w-[70px] h-[70px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Bootstrap</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_tailwind2.png" class=" w-[100px] h-[60px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Tailwindcss</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_animejs.jpeg" class=" w-[110px] h-[30px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">animeJS</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_gsap.jpeg" class=" w-[130px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Gsap</p>
+                        </div>
+                    </div>
+
+                    <!-- liste de languages backend -->
+                    <div class="backend boxItems hidden grid-cols-3 w-full gap-5">
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_javascript.png" class=" w-[70px] h-[70px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">JavaScript</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_php.png" class=" w-[70px] h-[70px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">PHP</p>
+                        </div>
+                    </div>
+
+                    <!-- liste de base de données -->
+                    <div class="bdd boxItems hidden grid-cols-3 w-full gap-5">
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_mysql.png" class=" w-[80px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">MySql</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_github.png" class=" w-[70px] h-[60px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Github</p>
+                        </div>
+                    </div>
+
+                    <!-- liste de logiciels du Design -->
+                    <div class="design boxItems hidden grid-cols-3 w-full gap-5">
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_canva.png" class=" w-[130px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Canva</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_figma.png" class=" w-[65px] h-[65px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Figma</p>
+                        </div>
+                    </div>
+
+                    <!-- liste de logiciels utilisés -->
+                    <div class="outils boxItems hidden grid-cols-3 w-full gap-5">
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_wampm.png" class=" w-[40px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">WampServer</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_sublimetext.png" class=" w-[50px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Sublime Text</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_xampp.png" class=" w-[50px] h-[40px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">Xampp</p>
+                        </div>
+                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="../assets/images/logo_vscode.png" class=" w-[50px] h-[45px] object-cover mb-6">
+                            <p class="tracking-wide text-sm">VsCode</p>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+            <!-- section de mes projets réalisés -->         
+            <section id="projets" class="projets h-[100%] flex items-center w-full px-4 flex-col">
+                <p class="text-3xl uppercase tracking-wider mt-6 mb-[40px]">récents Projets</p>
+                <article class="viewListProjet w-[80%] flex flex-col mb-[150px] mt-[50px]">
+                     <div class="flex w-full justify-center gap-7 mb-[90px]">
+                        <p class="tout font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center hover:text-[#00c3ff] active">Tout</p>
+                        <p class="web font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center hover:text-[#00c3ff]">Web</p>
+                        <p class="app font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center hover:text-[#00c3ff]">Application</p>
+                        <p class="design font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center hover:text-[#00c3ff]">Design</p>
+                    </div>
+
+                    <div class="box">
+
+                        <!-- liste de tous les projets -->
+                        <div class="tout boxItems grid grid-cols-3 w-full gap-7">
+                            <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.05)] py-3 px-4 flex flex-col">
+                                <div class="imageProjet w-full h-[75%] m-auto rounded-md">
+                                    <img src="../assets/projets/dsl_19.jpg" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
+                                </div>
+                                <p class="tracking-wide font-bolder text-sm mt-2 mb-3">Web Design</p>
+                                <p class="text-sm text-[#00c3ff] hover:text-[#00c3e1] tracking-wide mb-2 cursor-pointer"> voir <i class="fa fa-arrow-up rotate-[90deg]"></i></p>
+                            </div> 
+                            <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.05)] py-3 px-4 flex flex-col">
+                                <div class="imageProjet w-full h-[75%] m-auto rounded-md">
+                                    <img src="../assets/projets/clinique.jpg" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
+                                </div>
+                                <p class="tracking-wide font-bolder text-sm mt-2 mb-3">Web Design</p>
+                                <p class="text-sm text-[#00c3ff] hover:text-[#00c3e1] tracking-wide mb-2 cursor-pointer"> voir <i class="fa fa-arrow-up rotate-[90deg]"></i></p>
+                            </div> 
+                            <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col">
+                                <div class="imageProjet w-full h-[75%] m-auto rounded-md">
+                                    <img src="../assets/projets/epicerie.png" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
+                                </div>
+                                <p class="tracking-wide font-bolder text-sm mt-2 mb-3">Web Design</p>
+                                <p class="text-sm text-[#00c3ff] hover:text-[#00c3e1] tracking-wide mb-2 cursor-pointer"> voir <i class="fa fa-arrow-up rotate-[90deg]"></i></p>
+                            </div> 
+                            <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.05)] py-3 px-4 flex flex-col">
+                                <div class="imageProjet w-full h-[75%] m-auto rounded-md">
+                                    <img src="../assets/projets/fresh_1.JPG" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
+                                </div>
+                                <p class="tracking-wide font-bolder text-sm mt-2 mb-3">Web Design</p>
+                                <p class="text-sm text-[#00c3ff] hover:text-[#00c3e1] tracking-wide mb-2 cursor-pointer"> voir <i class="fa fa-arrow-up rotate-[90deg]"></i></p>
+                            </div> 
+                            <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.05)] py-3 px-4 flex flex-col">
+                                <div class="imageProjet w-full h-[75%] m-auto rounded-md">
+                                    <img src="../assets/projets/immo_2.JPG" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
+                                </div>
+                                <p class="tracking-wide font-bolder text-sm mt-2 mb-3">Web Design</p>
+                                <p class="text-sm text-[#00c3ff] hover:text-[#00c3e1] tracking-wide mb-2 cursor-pointer"> voir <i class="fa fa-arrow-up rotate-[90deg]"></i></p>
+                            </div>     
+                        </div>
+
+                        <!-- liste pour les projets web -->
+                        <div class="web boxItems hidden grid-cols-2 w-full gap-2">
+                            <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col">
+                                <div class="imageProjet w-full h-[75%] m-auto rounded-md">
+                                    <img src="../assets/projets/clinique.jpg" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
+                                </div>
+                                <p class="tracking-wide font-bolder text-sm mt-2 mb-3">Web Design</p>
+                                <p class="text-sm text-[#00c3ff] hover:text-[#00c3e1] tracking-wide mb-2 cursor-pointer"> voir <i class="fa fa-arrow-up rotate-[90deg]"></i></p>
+                            </div> 
+                        </div>
+
+
+                        <!-- liste pour les projets des applications -->
+                        <div class="app boxItems hidden grid-cols-2 w-full gap-2">
+                            <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col">
+                                <div class="imageProjet w-full h-[75%] m-auto rounded-md">
+                                    <img src="../assets/projets/dsl_19.jpg" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
+                                </div>
+                                <p class="tracking-wide font-bolder text-sm mt-2 mb-3">Web Design</p>
+                                <p class="text-sm text-[#00c3ff] hover:text-[#00c3e1] tracking-wide mb-2 cursor-pointer"> voir <i class="fa fa-arrow-up rotate-[90deg]"></i></p>
+                            </div> 
+                            <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col">
+                                <div class="imageProjet w-full h-[75%] m-auto rounded-md">
+                                    <img src="../assets/projets/epicerie.png" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
+                                </div>
+                                <p class="tracking-wide font-bolder text-sm mt-2 mb-3">Web Design</p>
+                                <p class="text-sm text-[#00c3ff] hover:text-[#00c3e1] tracking-wide mb-2 cursor-pointer"> voir <i class="fa fa-arrow-up rotate-[90deg]"></i></p>
+                            </div> 
+                        </div>
+
+
+                        <!-- liste pour les Design -->
+                         <div class="design boxItems hidden grid-cols-2 w-full gap-2">
+                            <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col">
+                                <div class="imageProjet w-full h-[75%] m-auto rounded-md">
+                                    <img src="../assets/projets/fresh_1.JPG" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
+                                </div>
+                                <p class="tracking-wide font-bolder text-sm mt-2 mb-3">Web Design</p>
+                                <p class="text-sm text-[#00c3ff] hover:text-[#00c3e1] tracking-wide mb-2 cursor-pointer"> voir <i class="fa fa-arrow-up rotate-[90deg]"></i></p>
+                            </div> 
+                        </div>
+                    </div>  
+                </article>
+            </section>
+
+
+            <!-- section performance -->
+            <section id="performances" class="performances h-[100Vh] w-full py-3 px-[25px] flex items-center flex-col">
+                <p class="text-3xl uppercase tracking-wider mt-6 mb-[60px]">mes performances</p>
+                <article class="flex gap-7 w-[70%] mt-6">
+                    <div class="row1 w-[50%] w-red-200 flex flex-col gap-5">
+
+                        <!-- frontend item -->
+                        <div class="frontend item flex items-center py-7 bg-[rgba(208,208,208,0.03)] cursor-pointer hover:bg-[rgba(208,208,208,0.10)] rounded-md relative active">
+                            <div class="icon px-4">
+                                <i class="fas fa-palette text-xl text-[#00c3ff]"></i>
+                            </div>
+                            <div class="textes">
+                                <p class="text-lg mb-3">Frontend développement</p>
+                                <p class="text-xs tracking-wide text-gray-400">plus de 4ns</p>
+                            </div>
+                            <div class="focusCercle w-[10px] h-[10px] border border-1 rounded-full absolute top-[10px] right-[5%] active"></div>
+                        </div>
+
+                        <!-- UI/UX Design -->
+                         <div class="design item flex items-center py-7 bg-[rgba(208,208,208,0.03)] cursor-pointer hover:bg-[rgba(208,208,208,0.10)] rounded-md relative">
+                            <div class="icon px-4">
+                                <i class="fas fa-pen-nib text-xl text-[#00c3ff]"></i>
+                            </div>
+                            <div class="textes">
+                                <p class="text-lg mb-3">UI/UX Design</p>
+                                <p class="text-xs tracking-wide text-gray-400">plus de 3ns</p>
+                            </div>
+                            <div class="focusCercle w-[10px] h-[10px] border border-1-400 rounded-full absolute top-[10px] right-[5%]"></div>
+                        </div>
+
+                        <!-- UI/UX Design -->
+                         <div class="backend item flex items-center py-7 bg-[rgba(208,208,208,0.03)] cursor-pointer hover:bg-[rgba(208,208,208,0.10)] rounded-md relative">
+                            <div class="icon px-4">
+                                <i class="fas fa-key text-xl text-[#00c3ff]"></i>
+                            </div>
+                            <div class="textes">
+                                <p class="text-lg mb-3">Backend développemnt</p>
+                                <p class="text-xs tracking-wide text-gray-400">plus de 2ns</p>
+                            </div>
+                            <div class="focusCercle w-[10px] h-[10px] border border-1 rounded-full absolute top-[10px] right-[5%]"></div>
+                        </div>
+                    </div>
+                    <div class="row2 w-[45%] flex flex-col">
+                        <div class="frontend boxItem w-full flex flex-col gap-7">
+                            <div class="html">
+                                <div class="top flex justify-between">
+                                    <p class="">HTML</p>
+                                    <p>90%</p>
+                                </div>
+                                <div class="bottom w-full mt-4">
+                                    <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[90%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
+                                </div>
+                            </div>
+                            <div class="css">
+                                <div class="top flex justify-between">
+                                    <p class="">CSS</p>
+                                    <p>80%</p>
+                                </div>
+                                <div class="bottom w-full mt-4">
+                                    <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[80%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
+                                </div>
+                            </div>
+                            <div class="javascript">
+                                <div class="top flex justify-between">
+                                    <p class="">JavaScript</p>
+                                    <p>25%</p>
+                                </div>
+                                <div class="bottom w-full mt-4">
+                                    <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[25%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
+                                </div>
+                            </div>
+                            <div class="tailwind">
+                                <div class="top flex justify-between">
+                                    <p class="">Tailwindcss</p>
+                                    <p>60%</p>
+                                </div>
+                                <div class="bottom w-full mt-4">
+                                    <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[60%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="design boxItem w-full flex-col gap-7 hidden">
+                            <div class="canva">
+                                <div class="top flex justify-between">
+                                    <p class="">Canva</p>
+                                    <p>30%</p>
+                                </div>
+                                <div class="bottom w-full mt-4">
+                                    <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[30%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
+                                </div>
+                            </div>
+                            <div class="figma">
+                                <div class="top flex justify-between">
+                                    <p class="">Figma</p>
+                                    <p>10%</p>
+                                </div>
+                                <div class="bottom w-full mt-4">
+                                    <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[10%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backend boxItem w-full flex-col gap-7 hidden">
+                            <div class="php">
+                                <div class="top flex justify-between">
+                                    <p class="">PHP</p>
+                                    <p>40%</p>
+                                </div>
+                                <div class="bottom w-full mt-4">
+                                    <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[40%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
+                                </div>
+                            </div>
+                            <div class="javascript">
+                                <div class="top flex justify-between">
+                                    <p class="">JavaScript</p>
+                                    <p>30%</p>
+                                </div>
+                                <div class="bottom w-full mt-4">
+                                    <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[30%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
