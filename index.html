@@ -5,17 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/output.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="./Fontawesome/css/all.min.css">
 </head>
 <body>
     <!-- le parent de tout mon contenu  -->
-    <div class="container-box text-white flex justify-end w-full h-full">
+    <div class="container-box max-md:relative text-white flex justify-end max-md:justify-center w-full h-full">
 
-        <!-- le sidebar-->
-        <div class="navbar fixed top-0 left-0 w-[7%] h-[100vh] bg-black flex flex-col p-3 items-center">
-            <a href="index.html" class="text-xl font-bold py-3 px-5 rounded-full bg-[#00c3ff]">D</a>
+        <div class="barIcon_open max-md:flex flex-col fixed top-6 left-6 z-[100] hover:scale-110 cursor-pointer items-center justify-center w-[5%] h-[5%] hidden">
+            <span class="w-full h-[2px] rounded-md bg-[rgb(255,255,255)] mb-2"></span>
+            <span class="w-full h-[2px] rounded-md bg-[rgb(255,255,255)] translate-x-[8px]"></span>
+            <span class="w-full h-[2px] rounded-md bg-[rgb(255,255,255)] mt-2"></span>
+        </div>
+
+        <!-- le navbar-->
+        <div class="navbar fixed max-md:hidden top-0 left-0 w-[7%] max-lg:w-[9%] h-[100%] bg-black flex flex-col p-3 items-center">
+            <a href="index.html" class="text-xl max-lg:text-[1em] font-bold py-2 px-4 rounded-full bg-[#00c3ff]">D</a>
             <ul class="mt-14 tracking-wide flex items-center gap-7 w-[70%] text-sm">
+                <li class="accueil hover:text-[#00C3ff] active"><a href="#accueil">Accueil</a></li>
+                <li class="apropos hover:text-[#00C3ff]"><a href="#apropos">A propos</a></li>
+                <li class="services hover:text-[#00C3ff]"><a href="#services">Services</a></li>
+                <li class="projets hover:text-[#00C3ff]"><a href="#projets">Projets</a></li>
+                <li class="performances hover:text-[#00C3ff]"><a href="#performances">Performances</a></li>
+                <li class="contact hover:text-[#00C3ff]"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    
+       <!-- le sidbar -->
+       <div class="sidebar fixed z-[100] top-0 left-0 w-[100%] h-[100%] bg-[rgba(0,0,0,0.9)] flex flex-col p-3 items-center justify-center">
+            <div class="barIcon_close flex flex-col absolute top-6 left-6 z-[10000] hover:scale-110 cursor-pointer items-center justify-center w-[5%] h-[5%]">
+                <span class="text-[3em]">&times</span>
+            </div>
+            <a href="index.html" class="text-xl max-lg:text-[1em] font-bold py-2 px-4 rounded-full bg-[#00c3ff]">D</a>
+            <ul class="mt-14 tracking-wide flex flex-col items-center gap-7 w-[70%] font-bolder text-md max-lg:text-[0.8em]">
                 <li class="accueil hover:text-[#00C3ff] active"><a href="#accueil">Accueil</a></li>
                 <li class="apropos hover:text-[#00C3ff]"><a href="#apropos">A propos</a></li>
                 <li class="services hover:text-[#00C3ff]"><a href="#services">Services</a></li>
@@ -26,282 +48,280 @@
         </div>
 
         <!-- contenu -->
-        <main class="content h-full flex flex-col items-center w-[93%] z-[100]">
+        <main class="content z-[1] h-full flex flex-col items-center w-[93%] max-lg:w-[95%] max-md:w-full z-[100]">
 
             <!-- section accueil -->
-            <section id="accueil" class="accueil h-[100Vh] w-full py-3 px-[25px] flex flex-col">
-                <h1 class="uppercase mt-4 tracking-wide text-2xl">mon <span class="text-[#00c3ff]">fortfolio</span></h1>
-                <div class="info flex w-full justify-between mt-[130px]">
-                    <div class="row1 w-[55%]">
-                        <p class="text-4xl mb-[15px]">Salut, je m'appelle Danny</p>
-                        <p class="text-lg">Développeur Full-stack</p>
-                        <p class="text-gray-400 text-sm mt-[25px] text-justify mb-3">Excellente expérience en conception et développement web, et capacité à produire un travil de qualité.</p>
-                        <p class="text-gray-400 text-sm text-justify">je maîtrise les fondamentaux du web, j'accorde une grnde importance à la qualité du code, à la maintenabilité et aux performances. J'aime transformer des idées en solutions digitales concrètes, en combinant design, logique et bonnes pratiques de d&veloppement.s</p>
-                        <div class="contact flex justify-center w-full mt-14 gap-5">
+            <section id="accueil" class="accueil h-[100Vh] max-md:h-[100%] w-full py-3 px-[25px] flex flex-col max-lg:items-center">
+                <h1 class="uppercase mt-4 tracking-wide text-2xl max-lg:text[1.8em] max-lg:hidden">mon <span class="text-[#00c3ff]">fortfolio</span></h1>
+                <div class="row2 hidden max-lg:flex max-lg:mt-[2.3em] max-lg:rounded-full bg-[rgba(208,208,208,0.02)] justify-center items-center py-4 w-[30%] max-md:w-[50%] max-lg:h-[30%] max-md:h-[33%]">
+                    <img src="./assets/danny.png" class="w-[70%] max-xl:w-[50%] max-md:w-[60%] max-xl:h-[90%] h-[100%] object-cover opacity-[0.6]" alt="photo de danny">
+                </div>
+                <div class="info flex w-full justify-between gap-5 mt-[130px] max-lg:mt-[27px] max-lg:justify-center max-lg:text-center">
+                    <div class="row1 w-[60%] max-md:w-[75%]">
+                        <p class="text-4xl mb-[15px] max-xl:text-3xl max-lg:text-2xl">Salut, je m'appelle Danny</p>
+                        <p class="text-lg max-xl:text-sm">Développeur Full-stack</p>
+                        <p class="text-gray-400 text-sm mt-[25px] text-justify max-xl:text-xs mb-3">Excellente expérience en conception et développement web, et capacité à produire un travil de qualité.</p>
+                        <p class="text-gray-400 text-sm  max-xl:text-xs text-justify">je maîtrise les fondamentaux du web, j'accorde une grnde importance à la qualité du code, à la maintenabilité et aux performances. J'aime transformer des idées en solutions digitales concrètes, en combinant design, logique et bonnes pratiques de d&veloppement.s</p>
+                        <div class="contact flex max-md:flex-col justify-center w-full mt-14 mb-6 gap-5">
                             <div class="box flex bg-[rgba(208,208,208,0.02)] items-center px-[1.7rem] py-4 rounded-md">
-                                <i class="fab fa-facebook-f text-[#00c3ff] mr-[15px] text-[16px]"></i>
-                                <div class="textes">
-                                    <p class="font-bold mb-1 text-sm tracking-wide">facebook</p>
-                                    <p class="text-gray-400 text-xs tracking-wide">danny wayway</p>
+                                <i class="fab fa-facebook-f text-[#00c3ff] mr-[15px] text-[0.9em]"></i>
+                                <div class="textes max-md:flex max-md:flex-col max-md:items-start max-md:ml-[5px]">
+                                    <p class="font-bold mb-1 text-sm max-xl:text[0.5em] max-md:text[0.4em] tracking-wide">facebook</p>
+                                    <p class="text-gray-400 text-xs max-xl:text[0.3em] max-md:text[0.2em] tracking-wide">danny wayway</p>
                                 </div>
                             </div>
                             <div class="box flex bg-[rgba(208,208,208,0.02)] items-center px-[1.7rem] py-4 rounded-md">
-                                <i class="fab fa-whatsapp text-[#00c3ff] mr-[15px] text-[16px]"></i>
-                                <div class="textes">
-                                    <p class="font-bold mb-1 text-sm tracking-wide">whatsapp</p>
-                                    <p class="text-gray-400 text-xs tracking-wide">+243822631890</p>
+                                <i class="fab fa-whatsapp text-[#00c3ff] mr-[15px] text-[0.9em]"></i>
+                                <div class="textes max-md:flex max-md:flex-col max-md:items-start max-md:ml-[5px]">
+                                    <p class="font-bold mb-1 text-sm max-xl:text[0.5em] max-md:text[0.4em] tracking-wide">whatsapp</p>
+                                    <p class="text-gray-400 text-xs max-xl:text[0.3em] max-md:text[0.2em] tracking-wide">+243822631890</p>
                                 </div>
                             </div>
                             <div class="box flex bg-[rgba(208,208,208,0.02)] items-center px-[1.7rem] py-4 rounded-md">
-                                <i class="fa fa-envelope text-[#00c3ff] mr-[15px] text-[16px]"></i>
-                                <div class="textes">
-                                    <p class="font-bold mb-1 text-sm tracking-wide">Email</p>
-                                    <p class="text-gray-400 text-xs tracking-wide">waywaydanny96</p>
+                                <i class="fa fa-envelope text-[#00c3ff] mr-[15px] text-[0.9em]"></i>
+                                <div class="textes max-md:flex max-md:flex-col max-md:items-start max-md:ml-[5px]">
+                                    <p class="font-bold mb-1 text-sm max-xl:text[0.5em] max-md:text[0.4em] tracking-wide">Email</p>
+                                    <p class="text-gray-400 text-xs max-xl:text[0.3em] max-md:text[0.2em] tracking-wide">waywaydanny96</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row2 bg-[rgba(208,208,208,0.02)] flex justify-center items-center py-4 w-[40%] ">
-                        <img src="./assets/danny.png" class="w-[70%] h-[100%] object-cover opacity-[0.6]" alt="photo de danny">
+                    <div class="row2 max-lg:hidden bg-[rgba(208,208,208,0.02)] flex justify-center items-center py-4 w-[40%] ">
+                        <img src="./assets/danny.png" class="w-[70%] max-xl:w-[50%] max-xl:h-[90%] h-[100%] object-cover opacity-[0.6]" alt="photo de danny">
                     </div>
                 </div>
             </section>
 
             <!-- section à propos de moi -->
-            <section id="apropos" class="apropos h-[100Vh] items-center w-full py-3 px-4 flex flex-col">
-                <p class="text-3xl uppercase tracking-wider mt-4">a propos de moi</p>
-                <article class="flex w-full justify-between mt-[100px] h-[70%]">
-                    <div class="row-images w-[40%] flex items-center justify-center h-[97%] bg-[rgba(208,208,208,0.04)]">
-                        <img src="./assets/danny2.png" class="w-[75%] opacity-[0.7] object-cover h-[70%]">
+            <section id="apropos" class="apropos h-[100Vh] max-lg:h-[100%] items-center w-full py-3 px-4 flex flex-col">
+                <p class="text-3xl max-xl:text-[1.8em] max-lg:text-[1.5em] uppercase tracking-wider mt-4">a propos de moi</p>
+                <article class="flex max-lg:flex-col max-lg:items-center w-full justify-between mt-[100px] h-[70%]">
+                    <div class="row-images w-[40%] flex items-center justify-center h-[90%] max-lg:h-[35%] max-lg:mb-[3em] max-lg:mt-[0.8em] bg-[rgba(208,208,208,0.04)]">
+                        <img src="./assets/danny2.png" class="w-[75%] max-xl:w-[65%] max-xl:h-[60%] opacity-[0.7] object-cover h-[70%]">
                     </div>
-                    <div class="row-infos flex flex-col w-[55%]">
-                        <p class="text-1xl font-bold mb-3">Salut, moi c'est Danny WAY-WAY, basant à Kinshasa(RDC)</p>
-                        <p class="text-gray-400 text-sm mt-[3px] mb-3">Développeur web passioné, je crée des expériences digitales modernes, fluides et centrées sur l'utilisateur. J'aime concevoir des interfaces interactives et performantes en transformant chaque idée en produit fonctionnel et intuitif</p>
-                        <p class="text-gray-400 text-sm mt-[3px] mb-3">Currieux et orienté, je m'attache à écrire un code propre, maintenable et optimisé, tout en intétrant des animations et des interactions qui donnent vie aus interfaces</p>
-                        <div class="row-box flex w-full mt-[25px]">
-                            <div class="flex flex-col py-[30px] px-[20px] w-[200px] h-[120px] rounded-md mr-[20px] bg-[rgba(208,208,208,0.04)]  justify-center items-center">
+                    <div class="row-infos flex flex-col max-lg:items-center max-lg:text-center w-[55%] max-lg:w-[60%]">
+                        <p class="text-1xl max-xl:text-[1em] font-bold mb-3">Salut, moi c'est Danny WAY-WAY, basant à Kinshasa(RDC)</p>
+                        <p class="text-gray-400 max-xl:text-[0.8em] text-sm mt-[3px] mb-3">Développeur web passioné, je crée des expériences digitales modernes, fluides et centrées sur l'utilisateur. J'aime concevoir des interfaces interactives et performantes en transformant chaque idée en produit fonctionnel et intuitif</p>
+                        <p class="text-gray-400 text-sm max-xl:text-[0.8em] mt-[3px] mb-3">Currieux et orienté, je m'attache à écrire un code propre, maintenable et optimisé, tout en intétrant des animations et des interactions qui donnent vie aus interfaces</p>
+                        <div class="row-box flex max-lg:justify-center w-full mt-[25px]">
+                            <div class="flex flex-col py-[30px] px-[20px] w-[200px] max-xl:w-[8em] max-xl:h-[7em] h-[120px] rounded-md mr-[20px] bg-[rgba(208,208,208,0.04)]  justify-center items-center">
                                 <i class="fas fa-medal mb-3 text-[#00C3ff]"></i>
-                                <p class="tracking-wide text-sm mb-3">Expérience</p>
+                                <p class="tracking-wide text-sm max-xl:text-[0.7em] mb-3">Expérience</p>
                                 <p class="text-gray-400 text-xs">+ 3 ans</p>
                             </div>
-                            <div class="flex flex-col py-[30px] px-[20px] w-[200px] h-[120px] rounded-md bg-[rgba(208,208,208,0.04)] justify-center items-center">
+                            <div class="flex flex-col py-[30px] px-[20px] w-[200px] max-xl:w-[8em] max-xl:h-[7em] h-[120px] rounded-md bg-[rgba(208,208,208,0.04)] justify-center items-center">
                                 <i class="fas fa-list-check  mb-3 text-[#00C3ff]"></i>
-                                <p class="tracking-wide text-sm mb-3">Projets</p>
+                                <p class="tracking-wide text-sm max-xl:text-[0.7em] mb-3">Projets</p>
                                 <p class="text-gray-400 text-xs">+ 4 Projets</p>
                             </div>
                         </div> 
-                        <button class="py-3 px-4 rounded-md bg-[#00c3ff] text-sm uppercase tracking-wide hover:bg-[#00c3e1] w-[20%] mt-14">voir plus</button>
+                        <button class="py-2 px-3 rounded-md bg-[#00c3ff] text-sm max-xl:text-[0.8em] uppercase tracking-wide hover:bg-[#00c3e1] w-[8em] mt-14 max-lg:mb-[3em]">voir plus</button>
                     </div> 
                 </article>
             </section>
 
             <!-- section services -->
             <section id="services" class="services h-full flex items-center w-full px-4 flex-col">
-                <p class="text-3xl uppercase tracking-wider mt-6 mb-[40px]">services</p>
-                <p class="text-sm text-gray-400 tracking-wider mb-[50px]">Ce que je propose</p>
+                <p class="text-3xl max-xl:text-[1.8em] uppercase tracking-wider mt-6 mb-[40px] max-lg:text-[1.5em]">services</p>
+                <p class="text-sm max-xl:text-[1em] max-lg:text-[0.6em] text-gray-400 tracking-wider mb-[50px]">Ce que je propose</p>
 
                 <article class="boxService flex gap-5 justify-center w-[80%] mb-[50px]">
-                    <div class="item bg-[rgba(208,208,208,0.02)] rounded-md flex flex-col justify-center w-[250px] h-[230px] px-[30px]">
-                        <i class="fas fa-palette mb-3 text-[#00C3ff] text-2xl"></i>
-                        <p class="text-md text-gray-400 tracking-wide mt-4 mb-3">Développement</p>
-                        <p class="text-sm tracking-wider">Frontend</p>   
+                    <div class="item bg-[rgba(208,208,208,0.02)] rounded-md flex flex-col justify-center w-[250px] max-xl:w-[10em] h-[230px] max-xl:h-[7.5em] px-[15px]">
+                        <i class="fas fa-palette mb-3 text-[#00C3ff] text-2xl max-xl:text-[1em]"></i>
+                        <p class="text-md xl:text-[0.7em] max-lg:text-[0.5em] text-gray-400 tracking-wide mt-4 mb-3">Développement</p>
+                        <p class="text-sm xl:text-[0.5em] max-lg:text-[0.3em] tracking-wider">Frontend</p>   
                     </div> 
-                    <div class="item bg-[rgba(208,208,208,0.02)] rounded-md flex flex-col justify-center w-[250px] px-[30px] h-[230px]">
-                        <i class="fas fa-key mb-3 text-[#00C3ff] text-2xl"></i>
-                        <p class="text-md text-gray-400 tracking-wide mt-4 mb-3">Développement</p>
-                        <p class="text-sm tracking-wider">Backend</p>   
+                    <div class="item bg-[rgba(208,208,208,0.02)] rounded-md flex flex-col justify-center w-[250px] max-xl:w-[10em] h-[230px] max-xl:h-[7.5em] px-[15px]"> 
+                        <i class="fas fa-key mb-3 text-[#00C3ff] text-2xl max-xl:text-[1em]"></i>
+                        <p class="text-md xl:text-[0.7em] max-lg:text-[0.5em] text-gray-400 tracking-wide mt-4 mb-3">Développement</p>
+                        <p class="text-sm xl:text-[0.5em] max-lg:text-[0.3em] tracking-wider">Backend</p>   
                     </div> 
-                    <div class="item bg-[rgba(208,208,208,0.02)] rounded-md flex flex-col justify-center w-[250px] px-[30px] h-[230px]">
-                        <i class="fas fa-pen-nib mb-3 text-[#00C3ff] text-2xl"></i>
-                        <p class="text-md text-gray-400 tracking-wide mt-4 mb-3">Design</p>
-                        <p class="text-sm tracking-wider">UI/UX</p>   
+                    <div class="item bg-[rgba(208,208,208,0.02)] rounded-md flex flex-col justify-center w-[250px] max-xl:w-[10em] h-[230px] max-xl:h-[7.5em] px-[15px]">
+                        <i class="fas fa-pen-nib mb-3 text-[#00C3ff] te.4xt-2xl max-xl:text-[1em]"></i>
+                        <p class="text-md xl:text-[0.7em] max-lg:text-[0.5em] text-gray-400 tracking-wide mt-4 mb-3">Design</p>
+                        <p class="text-sm xl:text-[0.5em] max-lg:text-[0.3em] tracking-wider">UI/UX</p>   
                     </div>
                 </article>
 
-                <article class="languages w-[68%] flex flex-col mb-[150px] mt-[50px]">
-                    <div class="viewList flex w-full justify-between mb-[60px]">
-                        <p class="tout font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center active">Tout</p>
-                        <p class="frontend font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">Frontend</p>
-                        <p class="backend font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">Backend</p>
-                        <p class="bdd font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">Base de données</p>
-                        <p class="design font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">UI/UX Design</p>
-                        <p class="outils font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">OUtils</p>
+                <article class="languages w-[68%] max-lg:w-[80%] max-md:w-[90%] max-sm:w-[95%] flex flex-col mb-[150px] max-xl:items-center mt-[50px]">
+                    <div class="viewList flex max-xl:grid max-xl:grid-cols-3 gap-5 max-lg:gap-7 w-full max-xl:h-full max-xl:w-[70%] max-sm:w-[80%] justify-between mb-[60px]">
+                        <p class="tout max-lg:flex max-lg:text-center font-bold text-sm max-xl:text-[0.7em] tracking-wide cursor-pointer py-2 max-lg:py-1 px-4 max-lg:px-3 rounded-md flex justify-center items-center active">Tout</p>
+                        <p class="frontend max-lg:flex max-lg:text-center font-bold text-sm max-xl:text-[0.6em] tracking-wide cursor-pointer py-2 max-lg:py-1 px-4 max-lg:px-3 rounded-md flex justify-center items-center">Frontend</p>
+                        <p class="backend max-lg:flex max-lg:text-center font-bold text-sm max-xl:text-[0.7em] tracking-wide cursor-pointer py-2 max-lg:py-1 px-4 max-lg:px-3 rounded-md flex justify-center items-center">Backend</p>
+                        <p class="bdd max-lg:flex max-lg:text-center font-bold text-sm max-xl:text-[0.6em] tracking-wide cursor-pointer py-2 max-lg:py-1 px-4 max-lg:px-3 rounded-md flex justify-center items-center">Base de données</p>
+                        <p class="design max-lg:flex max-lg:text-center font-bold text-sm max-xl:text-[0.7em]  tracking-wide cursor-pointer py-2 max-lg:py-1 px-4 max-lg:px-3 rounded-md flex justify-center items-center">UI/UX Design</p>
+                        <p class="outils max-lg:flex max-lg:text-center font-bold text-sm max-xl:text-[0.7em] tracking-wide cursor-pointer py-2 max-lg:py-1 px-4 max-lg:px-3 rounded-md flex justify-center items-center">OUtils</p>
                     </div>
 
                     <!-- liste de tout les items (languages et outils) -->
-                    <div class="tout boxItems grid-cols-3 w-full gap-5 grid">
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_html.png" class=" w-[70px] h-[70px] object-cover mb-4">
-                            <p class="tracking-wide text-sm">HTML</p>
+                    <div class="tout boxItems grid-cols-3 max-md:grid-cols-2 max-md:gap-2 max-lg:place-items-center w-full max-md:w-[70%] max-sm:w-[100%] gap-5 grid">
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_html.png" class=" w-[70px] xl:w-[4em] max-md:w-[2.1em] max-md:h-[32px] h-[70px] xl:h-[3em] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">HTML</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_css.png" class=" w-[70px] h-[70px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">CSS</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_css.png" class=" w-[70px] xl:w-[4em] max-md:w-[2.1em] max-md:h-[32px] h-[70px] xl:h-[3em] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">CSS</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_javascript.png" class=" w-[70px] h-[70px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">JavaScript</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_javascript.png" class=" w-[70px] max-xl:w-[4em] max-md:w-[2.1em] max-md:h-[32px] h-[70px] xl:h-[3em] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">JavaScript</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_php.png" class=" w-[70px] h-[70px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">PHP</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_php.png" class=" w-[70px] max-xl:w-[4em] max-md:w-[2.1em] max-md:h-[32px] h-[70px] xl:h-[2em] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">PHP</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_bootstrap.png" class=" w-[70px] h-[70px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Bootstrap</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_bootstrap.png" class=" w-[70px] max-xl:w-[4em] max-md:w-[2.1em] max-md:h-[32px] h-[70px] xl:h-[2em] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Bootstrap</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_tailwind2.png" class=" w-[100px] h-[60px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Tailwindcss</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_tailwind2.png" class=" w-[100px] max-xl:w-[4em] max-md:w-[2.1em] max-md:h-[20px] h-[60px] xl:h-[3em]  object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm max-xl:text-[0.8em] max-lg:text-[0.6em]">Tailwindcss</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_canva.png" class=" w-[130px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Canva</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_canva.png" class=" w-[130px] max-md:w-[3.6em] max-md:h-[18px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Canva</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_figma.png" class=" w-[65px] h-[65px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Figma</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_figma.png" class=" w-[65px] max-md:w-[2.1em] max-md:h-[32px] h-[65px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Figma</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_gsap.jpeg" class=" w-[130px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Gsap</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_gsap.jpeg" class=" w-[130px] max-md:w-[2.1em] max-md:h-[32px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Gsap</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_github.png" class=" w-[70px] h-[60px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Github</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_github.png" class=" w-[70px] max-md:w-[2.1em] max-md:h-[32px] h-[60px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Github</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_mysql.png" class=" w-[80px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">MySql</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_mysql.png" class=" w-[80px] max-md:w-[2.4em] max-md:h-[20px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">MySql</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_animejs.jpeg" class=" w-[110px] h-[30px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">animeJS</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_animejs.jpeg" class=" w-[110px] max-md:w-[4em] max-md:h-[20px] h-[30px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">animeJS</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_wampm.png" class=" w-[40px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">WampServer</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_wampm.png" class=" w-[40px] max-md:w-[2.1em] max-md:h-[32px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">WampServer</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_sublimetext.png" class=" w-[50px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Sublime Text</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_sublimetext.png" class=" w-[50px] max-md:w-[2.1em] max-md:h-[32px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Sublime Text</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_xampp.png" class=" w-[50px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Xampp</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_xampp.png" class=" w-[50px] max-md:w-[2.1em] max-md:h-[32px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Xampp</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_vscode.png" class=" w-[50px] h-[45px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">VsCode</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_vscode.png" class=" w-[50px] max-md:w-[2.1em] max-md:h-[32px] h-[45px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">VsCode</p>
                         </div>
                     </div>
 
                     <!-- liste de tout les languages frontend -->
-                    <div class="frontend boxItems hidden grid-cols-3 w-full gap-5">
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_html.png" class=" w-[70px] h-[70px] object-cover mb-4">
-                            <p class="tracking-wide text-sm">HTML</p>
+                    <div class="frontend boxItems hidden grid-cols-3 max-md:grid-cols-2 max-md:gap-2 max-lg:place-items-center w-full max-md:w-[70%] max-sm:w-[100%] w-full gap-5">
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_html.png" class=" w-[70px] xl:w-[4em] max-md:w-[2.1em] max-md:h-[32px] h-[70px] xl:h-[3em] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">HTML</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_css.png" class=" w-[70px] h-[70px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">CSS</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_css.png" class=" w-[70px] xl:w-[4em] max-md:w-[2.1em] max-md:h-[32px] h-[70px] xl:h-[3em] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">CSS</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_javascript.png" class=" w-[70px] h-[70px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">JavaScript</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_javascript.png" class=" w-[70px] max-xl:w-[4em] max-md:w-[2.1em] max-md:h-[32px] h-[70px] xl:h-[3em] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">JavaScript</p>
                         </div>
-                         <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_bootstrap.png" class=" w-[70px] h-[70px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Bootstrap</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_bootstrap.png" class=" w-[70px] max-xl:w-[4em] max-md:w-[2.1em] max-md:h-[32px] h-[70px] xl:h-[2em] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Bootstrap</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_tailwind2.png" class=" w-[100px] h-[60px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Tailwindcss</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_tailwind2.png" class=" w-[100px] max-xl:w-[4em] max-md:w-[2.1em] max-md:h-[20px] h-[60px] xl:h-[3em]  object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm max-xl:text-[0.8em] max-lg:text-[0.6em]">Tailwindcss</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_animejs.jpeg" class=" w-[110px] h-[30px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">animeJS</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_animejs.jpeg" class=" w-[110px] max-md:w-[4em] max-md:h-[20px] h-[30px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">animeJS</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_gsap.jpeg" class=" w-[130px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Gsap</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_gsap.jpeg" class=" w-[130px] max-md:w-[2.1em] max-md:h-[32px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Gsap</p>
                         </div>
                     </div>
 
                     <!-- liste de languages backend -->
-                    <div class="backend boxItems hidden grid-cols-3 w-full gap-5">
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_javascript.png" class=" w-[70px] h-[70px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">JavaScript</p>
+                    <div class="backend boxItems hidden grid-cols-3 max-md:grid-cols-2 max-md:gap-2 max-lg:place-items-center w-full max-md:w-[70%] max-sm:w-[100%] w-full gap-5">
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_javascript.png" class=" w-[70px] max-xl:w-[4em] max-md:w-[2.1em] max-md:h-[32px] h-[70px] xl:h-[3em] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">JavaScript</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_php.png" class=" w-[70px] h-[70px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">PHP</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_php.png" class=" w-[70px] max-xl:w-[4em] max-md:w-[2.1em] max-md:h-[32px] h-[70px] xl:h-[2em] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">PHP</p>
                         </div>
                     </div>
 
                     <!-- liste de base de données -->
-                    <div class="bdd boxItems hidden grid-cols-3 w-full gap-5">
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_mysql.png" class=" w-[80px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">MySql</p>
-                        </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_github.png" class=" w-[70px] h-[60px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Github</p>
+                    <div class="bdd boxItems hidden grid-cols-3 max-md:grid-cols-2 max-md:gap-2 max-lg:place-items-center w-full max-md:w-[70%] max-sm:w-[100%] w-full gap-5">
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_mysql.png" class=" w-[80px] max-md:w-[2.4em] max-md:h-[20px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">MySql</p>
                         </div>
                     </div>
 
                     <!-- liste de logiciels du Design -->
-                    <div class="design boxItems hidden grid-cols-3 w-full gap-5">
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_canva.png" class=" w-[130px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Canva</p>
+                    <div class="design boxItems hidden grid-cols-3 max-md:grid-cols-2 max-md:gap-2 max-lg:place-items-center w-full max-md:w-[70%] max-sm:w-[100%] w-full gap-5">
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_canva.png" class=" w-[130px] max-md:w-[3.6em] max-md:h-[18px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Canva</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_figma.png" class=" w-[65px] h-[65px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Figma</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_figma.png" class=" w-[65px] max-md:w-[2.1em] max-md:h-[32px] h-[65px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Figma</p>
                         </div>
                     </div>
 
                     <!-- liste de logiciels utilisés -->
-                    <div class="outils boxItems hidden grid-cols-3 w-full gap-5">
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_wampm.png" class=" w-[40px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">WampServer</p>
+                    <div class="outils boxItems hidden grid-cols-3 max-md:grid-cols-2 max-md:gap-2 max-lg:place-items-center w-full max-md:w-[70%] max-sm:w-[100%] w-full gap-5">
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_wampm.png" class=" w-[40px] max-md:w-[2.1em] max-md:h-[32px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">WampServer</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_sublimetext.png" class=" w-[50px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Sublime Text</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_sublimetext.png" class=" w-[50px] max-md:w-[2.1em] max-md:h-[32px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Sublime Text</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_xampp.png" class=" w-[50px] h-[40px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">Xampp</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_xampp.png" class=" w-[50px] max-md:w-[2.1em] max-md:h-[32px] h-[40px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">Xampp</p>
                         </div>
-                        <div class="w-[250px] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
-                            <img src="./assets/logo_vscode.png" class=" w-[50px] h-[45px] object-cover mb-6">
-                            <p class="tracking-wide text-sm">VsCode</p>
+                        <div class="w-[250px] max-xl:w-[11em] max-xl:h-[7em] h-[180px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col justify-center items-center">
+                            <img src="./assets/logo_vscode.png" class=" w-[50px] max-md:w-[2.1em] max-md:h-[32px] h-[45px] object-cover mb-6 max-lg:mb-5 max-md:mb-3">
+                            <p class="tracking-wide text-sm xl:text-[0.8em] max-lg:text-[0.6em]">VsCode</p>
                         </div>
                     </div>
                 </article>
-
             </section>
 
             <!-- section de mes projets réalisés -->         
             <section id="projets" class="projets h-[100%] flex items-center w-full px-4 flex-col">
-                <p class="text-3xl uppercase tracking-wider mt-6 mb-[40px]">récents Projets</p>
-                <article class="viewListProjet w-[80%] flex flex-col mb-[150px] mt-[50px]">
+                <p class="text-3xl uppercase tracking-wider mt-6 mb-[40px] max-xl:text-[1.8em] max-lg:text-[1.5em]">récents Projets</p>
+                <article class="viewListProjet w-[80%] max-md:w-[95%] flex flex-col mb-[150px] mt-[50px]">
                      <div class="flex w-full justify-center gap-7 mb-[90px]">
-                        <p class="tout font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center hover:text-[#00c3ff] active">Tout</p>
-                        <p class="web font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center hover:text-[#00c3ff]">Web</p>
-                        <p class="app font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center hover:text-[#00c3ff]">Application</p>
-                        <p class="design font-bold text-sm tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center hover:text-[#00c3ff]">Design</p>
+                        <p class="tout font-bold text-sm max-xl:text-[0.7em] tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center active">Tout</p>
+                        <p class="web font-bold text-sm max-xl:text-[0.7em] tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">Web</p>
+                        <p class="app font-bold text-sm max-xl:text-[0.7em] tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">Application</p>
+                        <p class="design font-bold text-sm max-xl:text-[0.7em] tracking-wide cursor-pointer py-2 px-4 rounded-md flex justify-center items-center">Design</p>
                     </div>
 
-                    <div class="box">
+                    <div class="box max-lg:w-[100%]">
 
                         <!-- liste de tous les projets -->
-                        <div class="tout boxItems grid grid-cols-3 w-full gap-7">
+                        <div class="tout boxItems grid grid-cols-3 max-lg:grid-cols-2 max-lg:place-items-center max-sm:grid-cols-1 w-full gap-7">
                             <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.05)] py-3 px-4 flex flex-col">
                                 <div class="imageProjet w-full h-[75%] m-auto rounded-md">
                                     <img src="./assets/dsl_19.jpg" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
@@ -340,7 +360,7 @@
                         </div>
 
                         <!-- liste pour les projets web -->
-                        <div class="web boxItems hidden grid-cols-2 w-full gap-2">
+                        <div class="web boxItems hidden grid-cols-3 max-lg:grid-cols-2 max-lg:place-items-center max-sm:grid-cols-1 w-full gap-7">
                             <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col">
                                 <div class="imageProjet w-full h-[75%] m-auto rounded-md">
                                     <img src="./assets/clinique.jpg" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
@@ -352,7 +372,7 @@
 
 
                         <!-- liste pour les projets des applications -->
-                        <div class="app boxItems hidden grid-cols-2 w-full gap-2">
+                        <div class="app boxItems hidden grid-cols-3 max-lg:grid-cols-2 max-lg:place-items-center max-sm:grid-cols-1 w-full gap-7">
                             <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col">
                                 <div class="imageProjet w-full h-[75%] m-auto rounded-md">
                                     <img src="./assets/dsl_19.jpg" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
@@ -371,7 +391,7 @@
 
 
                         <!-- liste pour les Design -->
-                         <div class="design boxItems hidden grid-cols-2 w-full gap-2">
+                         <div class="design boxItems hidden grid-cols-3 max-lg:grid-cols-2 max-lg:place-items-center max-sm:grid-cols-1 w-full gap-7">
                             <div class="rounded-md w-[280px] h-[360px] bg-[rgba(208,208,208,0.02)] py-3 px-4 flex flex-col">
                                 <div class="imageProjet w-full h-[75%] m-auto rounded-md">
                                     <img src="./assets/fresh_1.JPG" class="rounded-md w-[100%] h-[90%] object-cover mb-6">
@@ -386,10 +406,10 @@
 
 
             <!-- section performance -->
-            <section id="performances" class="performances h-[100Vh] w-full py-3 px-[25px] flex items-center flex-col">
-                <p class="text-3xl uppercase tracking-wider mt-6 mb-[60px]">mes performances</p>
-                <article class="flex gap-7 w-[70%] mt-6">
-                    <div class="row1 w-[50%] w-red-200 flex flex-col gap-5">
+            <section id="performances" class="performances h-[100Vh] max-xl:h-full w-full py-3 px-[25px] flex items-center flex-col">
+                <p class="text-3xl uppercase tracking-wider mt-6 mb-[60px] max-xl:text-[1.8em] max-lg:text-[1.5em]">mes performances</p>
+                <article class="flex max-xl:flex-col max-xl:items-center gap-7 w-[70%] max-xl:w-[75%] max-sm:w-[85%] mt-6 max-xl:mb-[4em]">
+                    <div class="row1 w-[50%] max-xl:w-[90%] flex flex-col gap-5">
 
                         <!-- frontend item -->
                         <div class="frontend item flex items-center py-7 bg-[rgba(208,208,208,0.03)] cursor-pointer hover:bg-[rgba(208,208,208,0.10)] rounded-md relative active">
@@ -397,8 +417,8 @@
                                 <i class="fas fa-palette text-xl text-[#00c3ff]"></i>
                             </div>
                             <div class="textes">
-                                <p class="text-lg mb-3">Frontend développement</p>
-                                <p class="text-xs tracking-wide text-gray-400">plus de 4ns</p>
+                                <p class="text-lg max-lg:text-[1.3em] max-md:text-[1em] max-sm:text-[0.8em] mb-3">Frontend développement</p>
+                                <p class="text-xs max-lg:text-[.8em] max-md:text-[0.6em] max-sm:text-[0.5em] tracking-wide text-gray-400">plus de 4ns</p>
                             </div>
                             <div class="focusCercle w-[10px] h-[10px] border border-1 rounded-full absolute top-[10px] right-[5%] active"></div>
                         </div>
@@ -409,8 +429,8 @@
                                 <i class="fas fa-pen-nib text-xl text-[#00c3ff]"></i>
                             </div>
                             <div class="textes">
-                                <p class="text-lg mb-3">UI/UX Design</p>
-                                <p class="text-xs tracking-wide text-gray-400">plus de 3ns</p>
+                                <p class="text-lg max-lg:text-[1.3em] max-md:text-[1em] max-sm:text-[0.8em] mb-3">UI/UX Design</p>
+                                <p class="text-xs max-lg:text-[.8em] max-md:text-[0.6em] max-sm:text-[0.5em] tracking-wide text-gray-400">plus de 3ns</p>
                             </div>
                             <div class="focusCercle w-[10px] h-[10px] border border-1-400 rounded-full absolute top-[10px] right-[5%]"></div>
                         </div>
@@ -421,18 +441,18 @@
                                 <i class="fas fa-key text-xl text-[#00c3ff]"></i>
                             </div>
                             <div class="textes">
-                                <p class="text-lg mb-3">Backend développemnt</p>
-                                <p class="text-xs tracking-wide text-gray-400">plus de 2ns</p>
+                                <p class="text-lg max-lg:text-[1.3em] max-md:text-[1em] max-sm:text-[0.8em] mb-3">Backend développemnt</p>
+                                <p class="text-xs max-lg:text-[.8em] max-md:text-[0.6em] max-sm:text-[0.5em] tracking-wide text-gray-400">plus de 2ns</p>
                             </div>
                             <div class="focusCercle w-[10px] h-[10px] border border-1 rounded-full absolute top-[10px] right-[5%]"></div>
                         </div>
                     </div>
-                    <div class="row2 w-[45%] flex flex-col">
+                    <div class="row2 w-[45%] max-xl:w-[90%] flex flex-col">
                         <div class="frontend boxItem w-full flex flex-col gap-7">
                             <div class="html">
                                 <div class="top flex justify-between">
-                                    <p class="">HTML</p>
-                                    <p>90%</p>
+                                    <p class="max-xl:text-[.6em]">HTML</p>
+                                    <p class="max-xl:text-[.6em]">90%</p>
                                 </div>
                                 <div class="bottom w-full mt-4">
                                     <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[90%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
@@ -440,8 +460,8 @@
                             </div>
                             <div class="css">
                                 <div class="top flex justify-between">
-                                    <p class="">CSS</p>
-                                    <p>80%</p>
+                                    <p class="max-xl:text-[.6em]">CSS</p>
+                                    <p class="max-xl:text-[.6em]">80%</p>
                                 </div>
                                 <div class="bottom w-full mt-4">
                                     <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[80%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
@@ -449,8 +469,8 @@
                             </div>
                             <div class="javascript">
                                 <div class="top flex justify-between">
-                                    <p class="">JavaScript</p>
-                                    <p>25%</p>
+                                    <p class="max-xl:text-[.6em]">JavaScript</p>
+                                    <p class="max-xl:text-[.6em]">25%</p>
                                 </div>
                                 <div class="bottom w-full mt-4">
                                     <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[25%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
@@ -458,8 +478,8 @@
                             </div>
                             <div class="tailwind">
                                 <div class="top flex justify-between">
-                                    <p class="">Tailwindcss</p>
-                                    <p>60%</p>
+                                    <p class="max-xl:text-[.6em]">Tailwindcss</p>
+                                    <p class="max-xl:text-[.6em]">60%</p>
                                 </div>
                                 <div class="bottom w-full mt-4">
                                     <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[60%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
@@ -469,8 +489,8 @@
                         <div class="design boxItem w-full flex-col gap-7 hidden">
                             <div class="canva">
                                 <div class="top flex justify-between">
-                                    <p class="">Canva</p>
-                                    <p>30%</p>
+                                    <p class="max-xl:text-[.6em]">Canva</p>
+                                    <p class="max-xl:text-[.6em]">30%</p>
                                 </div>
                                 <div class="bottom w-full mt-4">
                                     <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[30%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
@@ -478,8 +498,8 @@
                             </div>
                             <div class="figma">
                                 <div class="top flex justify-between">
-                                    <p class="">Figma</p>
-                                    <p>10%</p>
+                                    <p class="max-xl:text-[.6em]">Figma</p>
+                                    <p class="max-xl:text-[.6em]">10%</p>
                                 </div>
                                 <div class="bottom w-full mt-4">
                                     <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[10%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
@@ -489,8 +509,8 @@
                         <div class="backend boxItem w-full flex-col gap-7 hidden">
                             <div class="php">
                                 <div class="top flex justify-between">
-                                    <p class="">PHP</p>
-                                    <p>40%</p>
+                                    <p class="max-xl:text-[.6em]">PHP</p>
+                                    <p class="max-xl:text-[.6em]">40%</p>
                                 </div>
                                 <div class="bottom w-full mt-4">
                                     <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[40%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
@@ -498,8 +518,8 @@
                             </div>
                             <div class="javascript">
                                 <div class="top flex justify-between">
-                                    <p class="">JavaScript</p>
-                                    <p>30%</p>
+                                    <p class="max-xl:text-[.6em]">JavaScript</p>
+                                    <p class="max-xl:text-[.6em]">30%</p>
                                 </div>
                                 <div class="bottom w-full mt-4">
                                     <div class="range bg-[rgba(208,208,208,0.07)] w-full h-[8px] rounded-lg relative before:content['bonjour'] before:absolute before:top-0 before:left-0 before:w-[30%] before:h-full before:rounded-lg before:bg-[#00c3ff]"></div>
