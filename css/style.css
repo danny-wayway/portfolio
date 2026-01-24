@@ -71,6 +71,23 @@ body{
     transition: 0.4s linear;
 }
 
+.sidebar{
+    opacity: 0;
+    z-index: -1;
+    transition: 0.3s ease;
+}
+
+.sidebar.active{
+    opacity: 1;
+    z-index: 10000;
+}
+
+.sidebar ul li.active{
+    color: #00c3ff;
+    transition: 0.4s linear;
+}
+
+
 section.services .languages p{
     position: relative;
     transition: 0.4s linear;
