@@ -163,3 +163,35 @@ performancesDiv.forEach(item =>{
 		item.classList.add("active");
 	})
 })
+
+
+// evenement click sur la barre de navigsion pour faire apparaître le sidebar
+
+const barOpen = document.querySelector(".barIcon_open");
+const barClose = document.querySelector(".barIcon_close");
+let sidebarDiv = document.querySelector(".sidebar");
+
+barOpen.addEventListener("click",()=>{
+	sidebarDiv.classList.add("active");
+})
+barClose.addEventListener("click",()=>{
+	sidebarDiv.classList.remove("active");
+})
+ 
+ const sidebarItems = document.querySelectorAll(".sidebar ul li");
+
+sidebarItems.forEach( item =>  {
+
+	item.addEventListener("click", ()=>{
+		itemClassList = item.getAttribute("class").split(' ');
+		sidebarDiv.classList.remove("active");
+
+
+		// suprimer la class "active" du lien en cours
+		let activeItem = document.querySelector(".sidebar ul li.active");
+		activeItem.classList.remove("active");
+
+		item.classList.add("active")
+
+	})
+});
