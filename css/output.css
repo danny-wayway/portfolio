@@ -1595,10 +1595,6 @@ section.performances .row1 .item .focusCercle.active{
     height: 390px;
   }
 
-  .max-md\:h-\[25em\] {
-    height: 25em;
-  }
-
   .max-md\:w-\[2\.1em\] {
     width: 2.1em;
   }
@@ -1707,10 +1703,6 @@ section.performances .row1 .item .focusCercle.active{
     height: 11em;
   }
 
-  .max-sm\:h-\[80\%\] {
-    height: 80%;
-  }
-
   .max-sm\:h-\[90\%\] {
     height: 90%;
   }
@@ -1719,8 +1711,8 @@ section.performances .row1 .item .focusCercle.active{
     width: 100%;
   }
 
-  .max-sm\:w-\[20em\] {
-    width: 20em;
+  .max-sm\:w-\[19em\] {
+    width: 19em;
   }
 
   .max-sm\:w-\[70\%\] {
@@ -1737,18 +1729,6 @@ section.performances .row1 .item .focusCercle.active{
 
   .max-sm\:w-\[95\%\] {
     width: 95%;
-  }
-
-  .max-sm\:w-\[75\%\] {
-    width: 75%;
-  }
-
-  .max-sm\:w-\[90\%\] {
-    width: 90%;
-  }
-
-  .max-sm\:w-\[19em\] {
-    width: 19em;
   }
 
   .max-sm\:grid-cols-1 {
@@ -1782,6 +1762,11 @@ section.performances .row1 .item .focusCercle.active{
 
   .max-sm\:text-\[1em\] {
     font-size: 1em;
+  }
+
+  .max-sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
