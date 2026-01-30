@@ -1595,6 +1595,10 @@ section.performances .row1 .item .focusCercle.active{
     height: 390px;
   }
 
+  .max-md\:h-\[25em\] {
+    height: 25em;
+  }
+
   .max-md\:w-\[2\.1em\] {
     width: 2.1em;
   }
@@ -1707,12 +1711,16 @@ section.performances .row1 .item .focusCercle.active{
     height: 80%;
   }
 
+  .max-sm\:h-\[90\%\] {
+    height: 90%;
+  }
+
   .max-sm\:w-\[100\%\] {
     width: 100%;
   }
 
-  .max-sm\:w-\[25em\] {
-    width: 25em;
+  .max-sm\:w-\[20em\] {
+    width: 20em;
   }
 
   .max-sm\:w-\[70\%\] {
@@ -1731,8 +1739,16 @@ section.performances .row1 .item .focusCercle.active{
     width: 95%;
   }
 
-  .max-sm\:w-\[20em\] {
-    width: 20em;
+  .max-sm\:w-\[75\%\] {
+    width: 75%;
+  }
+
+  .max-sm\:w-\[90\%\] {
+    width: 90%;
+  }
+
+  .max-sm\:w-\[19em\] {
+    width: 19em;
   }
 
   .max-sm\:grid-cols-1 {
@@ -1745,6 +1761,11 @@ section.performances .row1 .item .focusCercle.active{
 
   .max-sm\:place-items-center {
     place-items: center;
+  }
+
+  .max-sm\:bg-red-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 202 202 / var(--tw-bg-opacity));
   }
 
   .max-sm\:text-\[0\.6em\] {
